@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -9,6 +10,8 @@ const UserList = () => {
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }, []);
+
+  if (!users) return <Loader />;
 
   return (
     <div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import Loader from "./Loader";
 
 const PostDetail = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const PostDetail = () => {
       .then((data) => setComments(data));
   }, [id]);
 
-  if (!post) return <div>Loading...</div>;
+  if (!post) return <div>{<Loader />}</div>;
 
   return (
     <div>

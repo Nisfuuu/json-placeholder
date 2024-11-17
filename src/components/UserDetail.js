@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
+import Loader from "./Loader";
 const UserDetail = () => {
   const { id } = useParams();
   const [user, setUser] = useState(null);
@@ -11,7 +11,7 @@ const UserDetail = () => {
       .then((data) => setUser(data));
   }, [id]);
 
-  if (!user) return <div>Loading...</div>;
+  if (!user) return <div>{<Loader />}</div>;
 
   return (
     <div>
