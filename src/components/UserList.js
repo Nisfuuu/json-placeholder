@@ -4,14 +4,16 @@ import Loader from "./Loader";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
-
+  const [loader, setLoader] = useState(true);
   useEffect(() => {
+    setLoader(true);
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((data) => setUsers(data));
+    setLoader(false);
   }, []);
 
-  if (!users) return <Loader />;
+  if (loader) return <Loader />;
 
   return (
     <div>

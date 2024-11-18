@@ -1,0 +1,32 @@
+/* src/App.css */
+.video-background {
+  position: fixed; /* Pastikan video tetap di tempat */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Video di belakang konten */
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Tambahkan gaya untuk Navbar dan konten lainnya */
+.navbar {
+  position: relative; /* Pastikan navbar berada di atas video */
+  z-index: 1; /* Lebih tinggi dari video */
+}
+
+.content {
+  position: relative; /* Pastikan konten berada di atas video */
+  z-index: 1; /* Lebih tinggi dari video */
+}
