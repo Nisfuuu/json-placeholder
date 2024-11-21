@@ -1,8 +1,0 @@
-/* src/components/Navbar.css */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
-  padding: 10px; /* Padding untuk navbar */
-  position: relative; /* Pastikan navbar berada di atas video */
-  z-index: 2; /* Lebih tinggi dari video */
-  color: white; /* Warna teks navbar */
-}

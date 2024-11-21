@@ -5,7 +5,7 @@ import PostList from "./components/PostList";
 import PostDetail from "./components/PostDetail";
 import UserList from "./components/UserList";
 import UserDetail from "./components/UserDetail";
-import "./App.css"; // Pastikan Anda mengimpor CSS
+import "./styles/styles.css"; // Mengimpor file CSS global
 
 function App() {
   const videoRef = useRef(null); // Membuat ref untuk video
@@ -18,13 +18,7 @@ function App() {
 
   return (
     <Router>
-      <div className="content">
-        <div className="video-background">
-          <video ref={videoRef} autoPlay loop muted>
-            <source src="/glass2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+      <div>
         <Navbar />
         <Routes>
           <Route path="/" element={<PostList />} />

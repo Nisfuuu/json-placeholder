@@ -1,20 +1,20 @@
-// src/components/Navbar.js
+// components/Navbar.js
 import React from "react";
-
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h1>My Blog</h1>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/users">Users</Link>
-        </li>
-      </ul>
+    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white z-50 p-4">
+      <div className="container mx-auto flex justify-between">
+        <Link to="/" className="text-lg font-bold">
+          Post List
+        </Link>
+        <div>
+          <Link to="/users" className="mx-2">
+            User List
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 };
